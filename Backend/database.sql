@@ -1,12 +1,12 @@
-create database if not exits agendamentos;
+CREATE DATABASE IF NOT EXISTS agendamentos;
 
-use agendamentos;
+USE agendamentos;
 
-create table usuarios(
-    id int AUTO_INCREMENT primary key,
-    nome VARCHAR(255) not null unique,
-    procedimento varchar (255) not null,
-    dia date not null,
-    hora time not null,
-    create_at timestamp default current_timestamp,
-)
+CREATE TABLE usuarios(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL UNIQUE,
+    procedimento VARCHAR(255) NOT NULL,
+    dia DATE NOT NULL,
+    hora TIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Corrigido: 'created_at' e sem vírgula no final
+);
